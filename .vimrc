@@ -1,13 +1,17 @@
 " Vimrc file
+if has("syntax")
+  syntax on
+endif
 
-syntax on
+"set colors
 set background=dark
+let base16colorspace=256
 colorscheme slate
 
 "load indentation rules according to file type
 filetype plugin indent on
 
-set showcmd "show (partial command in status line
+set showcmd "show (partial command in status line)
 set number
 set autoindent
 set expandtab
@@ -22,4 +26,6 @@ set while mode=list:longest,full
 " Shows files name above status bar
 set laststatus=2
 
-colorscheme slate
+"allow dsplaying buffers with \b and prefixes b to enable [number] or [partialname]
+nnoremap <leader>b :ls<CR>:b<space>
+
