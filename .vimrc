@@ -3,7 +3,7 @@ if has("syntax")
   syntax on
 endif
 
-"set colors
+"set color scheme
 set background=dark
 let base16colorspace=256
 colorscheme slate
@@ -21,7 +21,7 @@ set shiftwidth=4
 set softtabstop=4
 
 set wildmenu
-set while mode=list:longest,full
+set wildmode=list:longest,full
 
 " Shows files name above status bar
 set laststatus=2
