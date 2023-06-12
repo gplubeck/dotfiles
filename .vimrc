@@ -29,3 +29,33 @@ set laststatus=2
 "allow dsplaying buffers with \b and prefixes b to enable [number] or [partialname]
 nnoremap <leader>b :ls<CR>:b<space>
 
+"TEST Configs
+set nobackup
+set nowritebackup
+
+"shows cursor and line number
+set cursorline
+hi CursorLine cterm=none term =none
+
+"ensure no beeps
+set visualbell
+
+"show subdirs
+let g:netrw_liststyle=3
+
+set showmatch
+
+"covers almost all search cases
+set ignorecaase
+set smartcase
+
+"displays and errors if attempting to commit a write to an old version of a file
+set autoread
+
+"turn off word wrap
+set nowrap
+
+"Use system toolbar to copy/paste between multiple VIM processes
+"Will overwrite system clipboard and vim register buffer both ways
+set clipboard+=unnamed
+
