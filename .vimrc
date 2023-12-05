@@ -6,7 +6,11 @@ endif
 "set color scheme
 set background=dark
 let base16colorspace=256
-colorscheme slate
+
+"enable to show buffer status line when in single tap
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='base16_gruvbox_dark_hard'
+
 
 "load indentation rules according to file type
 filetype plugin indent on
@@ -23,34 +27,24 @@ set softtabstop=4
 set wildmenu
 set wildmode=list:longest,full
 
+"Shows cursor and line number
+set cursorline
+hi CursorLine cterm=none term=none ctermbg=234
+
 " Shows files name above status bar
 set laststatus=2
 
-"allow dsplaying buffers with \b and prefixes b to enable [number] or [partialname]
-nnoremap <leader>b :ls<CR>:b<space>
-
-"TEST Configs
 set nobackup
 set nowritebackup
 
-"shows cursor and line number
-set cursorline
-hi CursorLine cterm=none term =none
+"covers almost all search cases
+set ignorecase
+set smartcase
 
 "ensure no beeps
 set visualbell
 
-"show subdirs
-let g:netrw_liststyle=3
-
 set showmatch
-
-"covers almost all search cases
-set ignorecaase
-set smartcase
-
-"displays and errors if attempting to commit a write to an old version of a file
-set autoread
 
 "turn off word wrap
 set nowrap
@@ -59,3 +53,24 @@ set nowrap
 "Will overwrite system clipboard and vim register buffer both ways
 set clipboard+=unnamed
 
+"allow dsplaying buffers with \b and prefixes b to enable [number] or [partialname]
+nnoremap <leader>b :ls<CR>:b<space>
+
+"change \f to current dir fzf
+nnoremap <leader>f :FZF<CR>
+
+"change \F to ~ fzf
+nnoremap <leader>F :FZF ~<CR>
+
+"VIM PLUG SECTION
+set nocompatible
+"filetype plugin on
+"syntax on
+
+let g:vimwiki_list = [{'path': '$HOME/vimwiki/wiki',
+            \ 'template_path': '$HOME/vimwiki/templates',
+            \ 'path_html': '$HOME/vimwiki/site',
+            \ 'template_default': 'default',
+            \ 'template_ext' : '.html',
+            \ 'name': 'grant.wiki',
+            \ 'auto_export': 1 }]
