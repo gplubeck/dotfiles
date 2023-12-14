@@ -62,11 +62,6 @@ nnoremap <leader>f :FZF<CR>
 "change \F to ~ fzf
 nnoremap <leader>F :FZF ~<CR>
 
-"VIM PLUG SECTION
-set nocompatible
-"filetype plugin on
-"syntax on
-
 let g:vimwiki_list = [{'path': '$HOME/vimwiki/wiki',
             \ 'template_path': '$HOME/vimwiki/templates',
             \ 'path_html': '$HOME/vimwiki/site',
